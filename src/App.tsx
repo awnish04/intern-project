@@ -1,17 +1,17 @@
+import AnnouncementBar from "./components/AnnouncementBar";
+import { MegaMenuWithHover } from "./components/MaterialMegaMenu";
 
-import AnnouncementBar from "./components/AnnouncementBar"
-
-
+import { ThemeProvider } from "./provider/theme-provider";
 
 function App() {
-
-
   return (
     <>
-      <AnnouncementBar/>
+      <AnnouncementBar />
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <MegaMenuWithHover/>
+      </ThemeProvider>
     </>
-    
-  )
+  );
 }
 
-export default App
+export default App;
